@@ -1,7 +1,11 @@
 from fastapi import FastAPI
+from api.routers import line#
 
-app = FastAPI()
-
+app = FastAPI(
+    
+)
+# lineファイルで定義したルートをアプリケーションに適用
+app.include_router(line.router)
 
 @app.get("/")
 async def root():
